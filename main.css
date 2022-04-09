@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
+
+:root {
+    --font-display: "Dosis", sans-serif;
+    --font-monospace: "JetBrains Mono", monospace;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #000;
+}
+
+header img {
+    width: 2rem;
+    position: fixed;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50rem;
+}
+
+nav .nav-link {
+    font-family: var(--font-monospace);
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding: 1.2rem;
+    transition: 0.5s;
+}
+
+nav .nav-link:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    padding: 5rem;
+}
+
+section {
+    display: block;
+    margin: 1.25rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.product img {
+    border-radius: 20%;
+    width: 400px;
+}
+
+.product-specifications {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+}
+
+.product-specifications h6 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.product-specifications p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section iframe {
+    width: 80%;
+    height: 35rem;
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background-color: #000;
+    border-radius: 1.2rem;
+}
+
+.specifications {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 8px 8px 1px rgba(0, 0, 0, 0.7);
+    padding: 3rem;
+}
+
+.full-specifications {
+    padding: 3rem;
+}
+
+.full-specifications-details {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.specifications-detail {
+    background-color: #000;
+    color: #fff;
+    font-size: var(--font-monospace);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+.specifications-detail:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+.specifications-detail h6 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.contact {
+    padding: 1.5rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact form label {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.contact form input {
+    border-radius: 0.5rem;
+    width: 25rem;
+    height: 2.5rem;
+    border: none;
+}
+
+.contact form input[type="email"] {
+    padding: 1rem;
+}
+
+.contact form input[type="submit"] {
+    background-color: cadetblue;
+    color: #fff;
+    width: 15rem;
+    margin: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact form input[type="submit"]:hover {
+    background-color: #fff;
+    color: cadetblue;
+}
+
+@media only screen and (max-width: 768px) {
+    .product {
+        flex-direction: column;
+    }
+
+    section iframe {
+        width: 60%;
+        height: 25rem;
+    }
+
+    .specifications {
+        flex-direction: column;
+    }
+
+    .full-specifications-details {
+        grid-template-columns: auto;
+    }
+
+    nav {
+        background-color: #000;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 0rem;
+        margin-top: 18rem;
+    }
+
+    nav ul li {
+        margin: 1rem;
+    }
+
+    nav .nav-link {
+        font-family: var(--font-monospace);
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        padding: 1.2rem;
+        transition: 0.5s;
+    }
+
+    .container {
+        padding-top: 20rem;
+    }
+}
